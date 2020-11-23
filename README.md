@@ -13,6 +13,12 @@ Links:
   [3](https://www.debian.org/doc/manuals/debmake-doc/ch05.html),
   and many more.
 
+## Contents
+
+| File(s)             | Description                                              |
+| ------------------- | -------------------------------------------------------- |
+| rules.d/template.mk | [simple] template expansion snippet, see comments inside |
+
 ## License
 
 BSD 3-Clause
