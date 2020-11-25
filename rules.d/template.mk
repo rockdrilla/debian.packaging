@@ -66,16 +66,8 @@ $(deb_files):
 ## deb_control_files is list of (renamed) files which are needed by debhelper
 ## at least, debian/control must be here (if it's templated one)
 
-clean: $(deb_control_files)
-
-## uncomment following lines if this is your case
-
-# override_dh_clean: $(deb_control_files)
-
 ## deb_files is list of (renamed) files which are generally needed by build
 ## e.g. configs, wrappers for real binaries, et cetera
-
-# build binary: $(deb_files)
 
 ## note: you can add manually files to deb_files list and provide custom renaming scheme
 ## example:
@@ -83,3 +75,9 @@ clean: $(deb_control_files)
 ## debian/tmp/superb.conf: debian/configs/superb.in
 ##
 ## deb_files +=debian/tmp/superb.conf
+##
+## execute_before_dh_install: debian/tmp/superb.conf
+
+clean: debian/control
+build binary: $(deb_control_files)
+build-% binary-%: $(deb_control_files)
