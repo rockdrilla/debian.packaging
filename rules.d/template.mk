@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 # SPDX-License-Identifier: BSD-3-Clause
-# (c) 2020, Konstantin Demin
+# (c) 2020-2021, Konstantin Demin
 
 ## simple template expansion snippet
 ## it expands variables enclosed within '%' in files and renames files accordingly
